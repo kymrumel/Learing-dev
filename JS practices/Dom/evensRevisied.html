@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div id="wrapper">
+               <h1>This is the first heading</h1>
+               <h2>This is the second heading</h2>
+               <h3>This is the third heading</h3>
+               <p>This a new paragraph</p>
+               <p id="one">This a para</p>
+               <button id="create">Create elements</button>
+               <button id="insertbefore">Insert something</button>
+               <button id="append">Append elements</button>
+               <button id="remove">Remove elements</button>
+          </div>
+          <script>
+               let wrapper = document.querySelector("#wrapper");
+               let h1 = document.querySelector("h1");
+               let h2 = document.querySelector("h2");
+               let h3 = document.querySelector("h3");
+               let p = document.querySelector("p");
+               let one = document.querySelector("#one");
+               let create = document.querySelector("#create");
+               let insertbefore = document.querySelector("#insertbefore");
+               let append = document.querySelector("#append");
+               let remove = document.querySelector("#remove");
+               create.addEventListener("click", function () {
+                    let para = document.createElement("p");
+                    para.textContent = "This is new";
+                    h2.append(para);
+               });
+               insertbefore.addEventListener("click", function () {
+                    wrapper.insertBefore(h2, one);
+               });
+               append.addEventListener("click", function () {
+                    one.append(h1);
+               });
+               remove.addEventListener("click", function () {
+                    one.remove();
+               });
+          </script>
+     </body>
+</html>

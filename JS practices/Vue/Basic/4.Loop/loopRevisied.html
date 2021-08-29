@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div id="demo">
+               <ol>
+                    <li v-for="item in todos">{{item.text}}</li>
+               </ol>
+               <ol>
+                    <li v-for="item in after">{{item.text}}</li>
+               </ol>
+               <p v-for="item in Number">{{item}}</p>
+          </div>
+          <script src="vue.js"></script>
+          <script src="loopRevisied.js"></script>
+     </body>
+</html>

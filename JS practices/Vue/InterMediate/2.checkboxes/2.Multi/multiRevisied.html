@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div id="demo">
+               <input
+                    type="checkbox"
+                    id="Jack"
+                    value="Jack"
+                    v-model="checkedNames"
+               />
+               <label for="Jack"></label>
+               <input
+                    type="checkbox"
+                    id="John"
+                    value="John"
+                    v-model="checkedNames"
+               />
+               <label for="John"></label>
+               <input
+                    type="checkbox"
+                    id="Snow"
+                    value="Snow"
+                    v-model="checkedNames"
+               />
+               <label for="Snow"></label>
+               <input
+                    type="checkbox"
+                    id="Wick"
+                    value="Wick"
+                    v-model="checkedNames"
+               />
+               <label for="Wick"></label>
+               <span>Check Names:{{checkedNames}}</span>
+          </div>
+          <script src="vue.js"></script>
+          <script src="multiRevisied.js"></script>
+     </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div class="demo">Download Now</div>
+
+          <script>
+               let movieList = [
+                    {
+                         id: 1,
+                         name: "Pirates of The Carribean",
+                    },
+                    {
+                         id: 2,
+                         name: "Avengers Endgame",
+                    },
+                    { id: 3, name: "Iron Man 2" },
+                    { id: 4, name: "John Wick" },
+                    { id: 5, name: "The Matrix" },
+                    { id: 5, name: "The Hitman's Bodyguard" },
+                    { id: 6, name: "Dr Strange" },
+                    { id: 7, name: "Batman The Dark Knight" },
+               ];
+
+               getmovieList();
+               async function getmovieList() {
+                    let films = await movieList;
+                    let list = await films;
+
+                    updateList(list);
+               }
+               function updateList(list) {
+                    let demo = document.querySelector(".demo");
+                    demo.innerHTML = list
+                         .map((m) => `<div>${m.name}</div>`)
+                         .join(" ");
+               }
+          </script>
+     </body>
+</html>

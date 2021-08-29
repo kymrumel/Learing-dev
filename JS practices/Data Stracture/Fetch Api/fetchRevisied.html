@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+          <style>
+               #dogImage {
+                    height: 300px;
+                    width: 400px;
+                    background-size: cover;
+                    background-position: cover;
+               }
+          </style>
+     </head>
+     <body>
+          <h1>Find your dog</h1>
+          <div id="breedList">
+               <button onclick="loadBreeds()">Load Dogs Name</button>
+               <select name="selectNames" id="">
+                    <option>Choose a dog breed</option>
+               </select>
+          </div>
+          <h3 id="name"></h3>
+          <div id="breedImage"></div>
+     </body>
+     <script>
+          loadBreeds();
+          async function loadBreeds() {
+               let response = await fetch(
+                    "https://dog.ceo/api/breeds/list/all"
+               );
+               let dogs = await response.json();
+               // console.log("loadBreeds", dogs);
+
+               createdoglist(dogs.message);
+          }
+
+          async function createdoglist(names) {
+               let select = document.querySelector('[name="selectNames"]');
+               let namesArray = Object.keys(names);
+
+               select.innerHTML = namesArray.map(
+                    (breed) => `<option>${breed}</option>`
+               );
+          }
+          let select = document.querySelector('[name="selectNames"]');
+          select.addEventListener("change", function () {
+               console.log(select.value);
+               loadBreedName(select.value);
+          });
+
+          async function loadBreedName(dogName) {
+               let response = await fetch(
+                    `https://dog.ceo/api/breed/${dogName}/images`
+               );
+               let data = await response.json();
+               console.log(data.message[0]);
+               let img1 = data.message[0];
+               let breedImage = document.querySelector("#breedImage");
+               breedImage.innerHTML = `<img src="${img1}"  width="600" height="600">`;
+               let name = document.querySelector("#name");
+               name.innerHTML = dogName.toUpperCase();
+          }
+     </script>
+</html>

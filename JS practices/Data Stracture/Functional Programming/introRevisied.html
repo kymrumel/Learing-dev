@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div id="list"></div>
+
+          <script>
+               let toDoIndex = [
+                    { id: 1, name: "Go to sleep" },
+                    { id: 2, name: "Go to work" },
+                    { id: 3, name: "Get rid of the cats & dogs" },
+                    { id: 4, name: "Go for a walk" },
+                    { id: 5, name: "Take a shower" },
+                    { id: 6, name: "Brush your teeth" },
+                    { id: 7, name: "Wash your clothes" },
+                    { id: 8, name: "Spent time wih your family" },
+                    { id: 9, name: "Do some household works" },
+               ];
+
+               getToDoInbdex();
+
+               async function getToDoInbdex() {
+                    let record = await toDoIndex;
+                    let info = await record;
+
+                    upadateData(info);
+               }
+               function upadateData(info) {
+                    let any = document.querySelector("#list");
+                    any.innerHTML = info
+                         .map((d) => `<div>${d.name}</div>`)
+                         .join("");
+               }
+          </script>
+     </body>
+</html>

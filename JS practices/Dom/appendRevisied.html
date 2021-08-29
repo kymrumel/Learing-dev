@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <h1>This is the first heading</h1>
+          <h2>This is the second heading</h2>
+          <p>
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+               consequuntur expedita modi molestiae dolorem commodi! Asperiores
+               excepturi impedit in sint facere quibusdam saepe. Veniam placeat
+               nobis eos, voluptatum dolor fugiat!
+          </p>
+          <script>
+               let heading3 = document.createElement("h3");
+               heading3.textContent = "This is the third heading";
+               let h2 = document.querySelector("h2");
+               h2.appendChild(heading3);
+
+               let heading4 = document.createElement("h4");
+               heading4.textContent = "This is the fourth heading";
+               let h3 = document.querySelector("h3");
+               h3.append(heading4);
+
+               let para = document.createElement("p");
+               para.textContent = "This is a paragraph";
+               let p = document.querySelector("p");
+               p.append(para);
+          </script>
+     </body>
+</html>

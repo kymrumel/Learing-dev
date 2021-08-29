@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+          <style>
+               .show {
+                    display: block !important;
+               }
+               .hide,
+               .option {
+                    display: none;
+               }
+          </style>
+     </head>
+     <body>
+          <div id="sample"></div>
+          <button onclick="clicked()">Click Here</button>
+          <div class="option show">Three</div>
+          <script>
+               function clicked() {
+                    let Three = document.querySelector(".option");
+                    if (Three.classList.contains("show")) {
+                         Three.classList.remove("show");
+                         Three.classList.add("hide");
+                    } else {
+                         Three.classList.remove("hide");
+                         Three.classList.add("show");
+                    }
+               }
+          </script>
+     </body>
+</html>

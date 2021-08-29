@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <div id="demo">
+               <div v-for="item in todos" :key="item.id">
+                    <div v-if="item.isUpdating">
+                         {{item.id}} : <input v-model="currentData" />
+                         <button @click="updateData(item.id)">update</button>
+                    </div>
+                    <div v-else>
+                         {{item.id}}:{{item.title}}
+                         <button @click="editData(item.id)">Edit</button>
+                         <button @click="removeData(item.id)">Close</button>
+                    </div>
+               </div>
+               <input placeholder="Add Todos" v-model="newData" />
+               <button @click="createData" type="submit">Add Todos</button>
+          </div>
+          <script src="Vue.js"></script>
+          <script src="CrudData-Revisied.js"></script>
+     </body>
+</html>

@@ -1,0 +1,58 @@
+* {
+     margin: 0;
+     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+     color: black;
+}
+.navbar {
+     padding: 30px;
+     display: flex;
+     align-items: center;
+     max-width: 600px;
+     margin: 0 auto;
+     border-bottom: 1px solid blueviolet;
+}
+.navbar h1 {
+     color: brown;
+}
+.navbar .links {
+     margin-left: auto;
+}
+
+.navbar a {
+     margin-left: 16px;
+     text-decoration: none;
+     padding: 6px;
+}
+.navbar a:hover {
+     color: blue;
+}
+.content {
+     max-width: 600px;
+     margin: 40px auto;
+     padding: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.greet {
+     max-width: 600px;
+     margin: 5px auto;
+     padding: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.blog-preview {
+     padding: 10px 16px;
+     margin: 20px 0;
+     border-bottom: 1px solid black;
+}
+.blog-preview:hover {
+     box-shadow: 1px 3px 5px green;
+}
+.blog-preview h2 {
+     font-size: 20px;
+     color: rgb(98, 13, 13);
+     margin-bottom: 0px;
+}
